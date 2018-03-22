@@ -202,8 +202,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 390693875}
-  - component: {fileID: 390693874}
   - component: {fileID: 390693876}
+  - component: {fileID: 390693874}
   m_Layer: 0
   m_Name: DictationSource
   m_TagString: Untagged
@@ -217,11 +217,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 390693873}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c98abfe83116c7e429b24199e4656ff8, type: 3}
+  m_Script: {fileID: 11500000, guid: cbfa8ddd36bd6444e9031dc73bb8104a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyword: listen
+  dictationSource: {fileID: 390693876}
 --- !u!4 &390693875
 Transform:
   m_ObjectHideFlags: 0
