@@ -12,14 +12,18 @@ namespace LUIS.Results
         public float score;
     }
     [Serializable]
+    public class QueryResultsResolution
+    {
+        public string[] values;
+    }
+    [Serializable]
     public class QueryResultsEntity
     {
         public string entity;
         public string type;
         public int startIndex;
         public int endIndex;
-
-        // TODO: need to figure out the resolution field here and what shape it has.
+        public QueryResultsResolution resolution;
     }
     [Serializable]
     public class QueryResults
