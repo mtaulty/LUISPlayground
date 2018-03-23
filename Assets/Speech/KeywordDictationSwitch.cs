@@ -15,9 +15,16 @@ public class KeywordDictationSwitch : MonoBehaviour
     }
     void NewRecognizer()
     {
-        this.recognizer = new KeywordRecognizer(new string[] { this.keyword });
-        this.recognizer.OnPhraseRecognized += this.OnPhraseRecgonized;
-        this.recognizer.Start();
+        if (recognizer == null)
+        {
+            this.recognizer = new KeywordRecognizer(new string[] { this.keyword });
+            this.recognizer.OnPhraseRecognized += this.OnPhraseRecgonized;
+        }
+        
+        if (!recognizer.IsRunning)
+        {
+            this.recognizer.Start();
+        }
     }
     void OnDictationStopped(object sender, System.EventArgs e)
     {
@@ -33,12 +40,18 @@ public class KeywordDictationSwitch : MonoBehaviour
             // There's some dragons here in trying to not have a KeywordRecognizer
             // and a DictationRecognizer active at the same time. Unity doesn't
             // like that and this code is trying to avoid that after much
-            // experimenting. 
-            this.recognizer.Stop();
-            this.recognizer.OnPhraseRecognized -= this.OnPhraseRecgonized;
-            this.recognizer.Dispose();
-            this.recognizer = null;
+            // experimenting.
+            if (this.recognizer != null)
+            {
+                this.recognizer.Stop();
+                this.recognizer.OnPhraseRecognized -= this.OnPhraseRecgonized;
+                this.recognizer.Dispose();
+                this.recognizer = null;
+            }
+
+            // Stop listening for activation keyword 
             PhraseRecognitionSystem.Shutdown();
+
             this.dictationSource.Listen();
         }
     }
