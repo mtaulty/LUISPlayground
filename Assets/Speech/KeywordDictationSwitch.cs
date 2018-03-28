@@ -4,7 +4,7 @@ using UnityEngine.Windows.Speech;
 
 public class KeywordDictationSwitch : MonoBehaviour
 {
-    public string[] keywords = { "ok", "now", "graph", "hey", "listen", "console" };
+    public string[] keywords = { "ok", "now", "hey", "listen" };
     public DictationSource dictationSource;
 
     void Start()
