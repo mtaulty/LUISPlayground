@@ -8,8 +8,8 @@ public class DictationSource : MonoBehaviour
 
     public float initialSilenceSeconds;
     public float autoSilenceSeconds;
-    public DictationSink dictationSink;
-   
+    public LUISDictationSink dictationSink;
+
     // TODO: Think about whether this should be married with the notion of
     // a focused object rather than just some 'global' entity.
 
