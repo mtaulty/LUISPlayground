@@ -23,12 +23,12 @@ public class LUISDictationSink : DictationSink
 {
     public float minimumConfidenceScore = 0.5f;
     public DictationSinkHandler[] intentHandlers;
+    public string luisApiEndpoint;
+    public string luisApiKey;
 
     public override void OnDictatedText(string text)
     {
-        var query = new Query(
-            "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/5cb7123d-1c67-40d3-ae54-dbcb4e1eb47c",
-            "98d9738e0621478e9f25acd318345003");
+        var query = new Query(this.luisApiEndpoint, this.luisApiKey);
 
         query.Utterance = text;
 

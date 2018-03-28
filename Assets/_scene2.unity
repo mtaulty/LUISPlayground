@@ -222,7 +222,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbfa8ddd36bd6444e9031dc73bb8104a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyword: listen
+  keywords:
+  - ok
+  - now
+  - hey
+  - listen
   dictationSource: {fileID: 390693876}
 --- !u!4 &390693875
 Transform:
@@ -248,8 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab72026d0e88392468cc9bc75fdfd186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSilenceSeconds: 0
-  autoSilenceSeconds: 0
+  initialSilenceSeconds: 10
+  autoSilenceSeconds: 10
   dictationSink: {fileID: 1856849270}
 --- !u!1 &403083824
 GameObject:
@@ -436,6 +440,8 @@ MonoBehaviour:
           m_CallState: 1
       m_TypeName: QueryResultsEventType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
+  luisApiEndpoint: endpoint needed here
+  luisApiKey: key needed here
 --- !u!4 &1856849271
 Transform:
   m_ObjectHideFlags: 0

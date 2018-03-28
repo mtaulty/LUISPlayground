@@ -1,0 +1,218 @@
+{
+  "luis_schema_version": "2.2.0",
+  "versionId": "0.1",
+  "name": "Cube Creation",
+  "desc": "Deal with making and deleting cubes",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "Create"
+    },
+    {
+      "name": "DeleteAll"
+    },
+    {
+      "name": "DeleteType"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [
+    {
+      "name": "shapeType",
+      "subLists": [
+        {
+          "canonicalForm": "cube",
+          "list": [
+            "cube",
+            "cube",
+            "cube",
+            "cube",
+            "cube",
+            "cube"
+          ]
+        },
+        {
+          "canonicalForm": "sphere",
+          "list": [
+            "sphere",
+            "sphere",
+            "sphere"
+          ]
+        },
+        {
+          "canonicalForm": "area",
+          "list": []
+        },
+        {
+          "canonicalForm": "circle",
+          "list": []
+        },
+        {
+          "canonicalForm": "cubes",
+          "list": []
+        },
+        {
+          "canonicalForm": "globe",
+          "list": []
+        },
+        {
+          "canonicalForm": "orb",
+          "list": []
+        },
+        {
+          "canonicalForm": "spheres",
+          "list": []
+        }
+      ]
+    }
+  ],
+  "regex_entities": [],
+  "bing_entities": [
+    "number"
+  ],
+  "model_features": [
+    {
+      "name": "shapeTypeList",
+      "mode": false,
+      "words": "cube,sphere",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "add a cube",
+      "intent": "Create",
+      "entities": []
+    },
+    {
+      "text": "clear",
+      "intent": "DeleteAll",
+      "entities": []
+    },
+    {
+      "text": "clear all the cubes",
+      "intent": "DeleteType",
+      "entities": []
+    },
+    {
+      "text": "clear all the spheres",
+      "intent": "DeleteType",
+      "entities": []
+    },
+    {
+      "text": "create a cube 1 metre away",
+      "intent": "Create",
+      "entities": []
+    },
+    {
+      "text": "create a sphere",
+      "intent": "Create",
+      "entities": []
+    },
+    {
+      "text": "delete all",
+      "intent": "DeleteAll",
+      "entities": []
+    },
+    {
+      "text": "delete everything",
+      "intent": "DeleteAll",
+      "entities": []
+    },
+    {
+      "text": "delete the cubes",
+      "intent": "DeleteType",
+      "entities": []
+    },
+    {
+      "text": "delete the spheres",
+      "intent": "DeleteType",
+      "entities": []
+    },
+    {
+      "text": "get rid of all the cubes",
+      "intent": "DeleteType",
+      "entities": []
+    },
+    {
+      "text": "get rid of everything",
+      "intent": "DeleteAll",
+      "entities": []
+    },
+    {
+      "text": "i would like to create a new cube 3 metres away",
+      "intent": "Create",
+      "entities": []
+    },
+    {
+      "text": "make a cube",
+      "intent": "Create",
+      "entities": []
+    },
+    {
+      "text": "make me a cube 4 metres away",
+      "intent": "Create",
+      "entities": []
+    },
+    {
+      "text": "new cube",
+      "intent": "Create",
+      "entities": []
+    },
+    {
+      "text": "new sphere",
+      "intent": "Create",
+      "entities": []
+    },
+    {
+      "text": "put a new cube in front of my face",
+      "intent": "Create",
+      "entities": []
+    },
+    {
+      "text": "put a sphere 5 metres away",
+      "intent": "Create",
+      "entities": []
+    },
+    {
+      "text": "remove cubes",
+      "intent": "DeleteType",
+      "entities": []
+    },
+    {
+      "text": "remove everything",
+      "intent": "DeleteAll",
+      "entities": []
+    },
+    {
+      "text": "remove spheres",
+      "intent": "DeleteType",
+      "entities": []
+    },
+    {
+      "text": "reset",
+      "intent": "DeleteAll",
+      "entities": []
+    },
+    {
+      "text": "reset cubes",
+      "intent": "DeleteType",
+      "entities": []
+    },
+    {
+      "text": "reset the spheres",
+      "intent": "DeleteType",
+      "entities": []
+    },
+    {
+      "text": "start again",
+      "intent": "DeleteAll",
+      "entities": []
+    }
+  ]
+}
